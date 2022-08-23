@@ -2,6 +2,9 @@ let colors = ['yellow','blue','red','green','purple'];
 let windowWidth = window.innerWidth;
 let windowHeight=window.innerHeight;
 let body = document.body;
+let scores = document.querySelectorAll('.score');
+let num = 0;
+let total = 10;
 
 function createBalloon(){
 	let div = document.createElement('div');
@@ -21,7 +24,6 @@ function animateBalloon(elem){
 	let interval = setInterval(frame, 10);
 
 	function frame() {
-		console.log(pos);
 		if(pos >= (window.innerHeight + 200 )){
 			clearInerval(interval);
 			deleteBallonn(elem);
@@ -34,4 +36,17 @@ function animateBalloon(elem){
 
 function deleteBallonn(elem) {
 	elem.remove();
+	num++;
+	updateScore();
 }
+
+function updateScore(elem) {
+	for(let i =0;i<scores.length;i++){
+		scores[i].textContent = num;
+	}
+}
+document.addEventListener('click',function(event){
+	if(event.target.classList.contains('balloon')){
+		deleteBallonn(event.target);
+	}
+})

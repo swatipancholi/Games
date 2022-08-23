@@ -6,54 +6,61 @@ body{
 	margin: 0;
 	font-family: Arial;
 }
+
 .balloon{
 	width: 100px;
 	height: 200px;
-	position: absolute;
 	top: 100vh;
+	position: absolute;
 
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-position: center;
-
+	background-repeat: no-repeat;
 }
+
 .balloon-red{
-	background-image: url(../img/red.jpg);
+	background-image: url(../img/balloon-red.png);
 }
 .balloon-yellow{
-	background-image: url(../img/yellow.png);
+	background-image: url(../img/balloon-yellow.png);
 }
 .balloon-blue{
-	background-image: url(../img/blue.jpg);
+	background-image: url(../img/balloon-blue.png);
+}
+.balloon-violet{
+	background-image: url(../img/balloon-violet.png);
 }
 .balloon-green{
-	background-image: url(../img/green.jpg);
+	background-image: url(../img/balloon-green.png);
 }
-.balloon-purple{
-	background-image: url(../img/purple.jpg);
-}
+
 .total-shadow{
 	width: 100vw;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0,0,0,0.6);
 	/*display: flex;*/
 	display: none;
 	justify-content: center;
+	align-items: center;
 	z-index: 1000;
 	position: relative;
 }
+
 .total-block{
 	background: #fff;
-	padding: 10px 100px 20px;
-	margin-bottom: 80px;
-	margin-top: 70px;
+	padding: 10px 100px 40px;
 	border-radius: 10px;
 	text-align: center;
-	box-shadow: 0 0 20px rgb(0,0,0,0.8);
+	box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.lose{
+	display: none;
 }
 .win{
 	display: none;
 }
+
 .score-block{
 	background: #efefef;
 	width: 300px;
@@ -66,3 +73,23 @@ body{
 	bottom: 0;
 	left: calc(50% - 150px);
 }
+.start-game-window {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
